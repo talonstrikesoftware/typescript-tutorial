@@ -10,6 +10,7 @@ services:
         - project_dir=./data/${PROJECT_DIR}
     ports:
       - "8888:8888"
+      - "3000:3000"
     volumes:
       - ${PWD}/data/${PROJECT_DIR}:/home/node/app
     stdin_open: true

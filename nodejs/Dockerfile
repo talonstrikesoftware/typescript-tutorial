@@ -22,10 +22,12 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -\
 
 #install typescript support globally
 RUN yarn global add typescript ts-node
+RUN yarn global add json-server
 
 WORKDIR /home/node/app
 
 EXPOSE 8888
+EXPOSE 3000
 
 # Start server (Exec form)
 #ENTRYPOINT ["./docker-entrypoint.sh"]
